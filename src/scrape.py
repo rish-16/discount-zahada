@@ -1,14 +1,12 @@
 import requests
 
-sites = {
-    'level1': 'http://www.mcgov.co.uk/riddles/level1.html',             # level 1
-    'youranswer': 'http://www.mcgov.co.uk/riddles/youranswer.html',     # level 2
-    'eye': 'http://www.mcgov.co.uk/riddles/eye.html',                   # level 3
-    'ninety': 'http://www.mcgov.co.uk/riddles/ninety.html',             # level 4
-    'luck': 'http://www.mcgov.co.uk/riddles/luck.html',                 # level 5
-}
+with open('answers.txt', 'r') as f:
+    sites = f.read().strip().split("\n")
+    
+print (sites)    
 
-for name, url in sites.items():
+for name in sites:
+    url = f'http://www.mcgov.co.uk/riddles/{name}.html'
     req = requests.get(url, 'html.parser')
 
     with open('../pages/' + name + '.html', 'w') as f:
