@@ -1,7 +1,7 @@
-import wget, os, re
-from bs4 import BeautifulSoup    
+import wget, os, re, requests
+from bs4 import BeautifulSoup
 
-PATH = "../../pages/"
+PATH = "../pages/"
 pages_dir = os.listdir(PATH)
 
 def get_image_names(path):
@@ -19,16 +19,21 @@ def get_image_names(path):
 
 all_images = []
 for page_path in pages_dir:
-    names = get_image_names(PATH + page_path)
-    if names != None:
-        all_images.extend(names)
+    if not os.path.isdir(PATH + page_path):
+        names = get_image_names(PATH + page_path)
+        if names != None:
+            all_images.extend(names)
     
 all_images = list(set(all_images))
 
 # download all images
 def download(name):
-    img_url = f'http://mcgov.co.uk/riddles/images/{name}'
-    wget.download(img_url)
-    
+    print (name)
+    img_url = f'http://mcgov.co.uk/riddles/{name}'
+    # wget.download(img_url, out=f"../pages/{name}")
+    os.system(f"wget {img_url} -O ../pages/{name}")
+    # with open(f'../pages/{name}', 'wb') as f:
+        # f.write(requests.get(img_url).content)
+
 for img in all_images:
     download(img)
