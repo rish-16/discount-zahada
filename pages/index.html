@@ -4,14 +4,73 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
         <title>SOCTank AMP</title>
     </head>
 
+    <style>
+        html, body {
+            font-family: Karla, Avenir Next;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #container {
+            width: 500px;
+            height: 500px;
+            margin: auto auto;
+        }
+
+        #banner {
+            font-size: 35px;
+            color: #54a0ff;
+            font-weight: bold;
+        }
+
+        #msg {
+            font-size: 15px;
+        }
+
+        button {
+            outline: none;
+            width: 80px;
+            height: 40px;
+            color: white;
+            border-radius: 7px;
+            border: none;
+            box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+            background-color: #1dd1a1;
+            font-family: Karla, Avenir Next;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+    </style>
+
     <body>
-        <p>This is a gateway to the first level.</p>
- 
-        <a href="level1.html">
-            Here
-        </a>
+        <div id="container">
+            <p id="banner">Welcome to SOCTank AMP!!!</p>
+
+            <p id="msg">
+                This website serves as a gateway to the SOCTank AMP portal where you will be given questions. 
+                The immediate next page gives you instructions on how you're supposed to traverse this challenge.
+                <br>
+                <br>
+                Read it carefully before starting your AMP session.
+                <br>
+                <br>
+                <br>
+                Happy Solving! ~ Megan and Rish
+            </p>
+    
+            <a href="level1.html">
+                <button>Begin</button>
+            </a>
+        </div>
     </body>
 </html>
