@@ -21,8 +21,11 @@
 
         #container {
             width: 500px;
-            height: 500px;
+            height: 550px;
+            padding: 15px;
             margin: auto auto;
+            /* border: 1px solid black; */
+            /* border-radius: 7px; */
         }
 
         #banner {
@@ -32,7 +35,7 @@
         }
 
         #msg {
-            font-size: 15px;
+            font-size: 16px;
         }
 
         button {
@@ -50,23 +53,46 @@
             margin: 20px auto;
             cursor: pointer;
         }
+
+        #og-box {
+            width: 100%;
+            height: 40px;
+            border: 1px solid black;
+            box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+            font-family: Karla, Avenir Next;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 7px;
+            margin: 10px 0;
+            text-indent: 10px;
+        }
     </style>
 
     <body>
         <div id="container">
-            <p id="banner">Congrats! You've finished BBB :D</p>
+            <h1><strong>CONGRATS!</strong></h1>
+            <p id="banner">You've finished BBB :D</p>
 
             <p id="msg">
-                This website serves as a gateway to the Big Brand Battle portal where you will be given questions. 
-                The immediate next page gives you instructions on how you're supposed to traverse this challenge.
+                The OGL who's sharing screen must type in their OG's name below to confirm that you are done with the challenge:
                 <br>
                 <br>
-                Read it carefully before starting your BBB session. <strong>Wrong answers</strong> will redirect to a 404
-                telling you the page doesn't exist. Click the back button on your browser and you should be back on track.
+                <input type="text" placeholder="Barg 1, KOJEG" id="og-box">
+                <br>
+                <br>
+                <strong style="color: rebeccapurple;">
+                    DM a screenshot of this page with your OG's name in the textbox
+                    to Rish (<em>@rishbob</em>) on Telegram.</strong>
+                <br>
+                <br>
+                This way, Megan and Rish can keep track of your progress on our side as your scores are updated
+                on our live database.
                 <br>
                 <br>
                 <br>
-                Happy Solving! ~ Megan and Rish
+                Hope you had fun twisting your brains ;) 
+                <br>
+                ~ Megan and Rish
             </p>
         </div>
     </body>
